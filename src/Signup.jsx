@@ -12,7 +12,7 @@ const Signup = () => {
   });
 
   // 네이게이트 스프링에 window.local 같음
-  const navigate = useNavigate
+  const navigate = useNavigate()
 
   // 회원가입시 재사용되는 핸들러임
   const onChangeHandler = (e) => {
@@ -35,11 +35,11 @@ const Signup = () => {
         axios.post(`${import.meta.env.VITE_SERVER_URL}/signup`, member)
         .then(response => {
           console.log(response.data)
-          alert(response.data);
+          alert(response.data)
           
-          navigate('/');
+          navigate('/')
         }).catch(error => {
-          console.log(error);
+          console.error(error);
         })
       }}>회원가입</button>
 
